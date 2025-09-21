@@ -7,7 +7,6 @@ import { model } from '../Utils/GeminiModel.js';
 
 const router = express.Router();
 
-// Create a new project
 router.post('/createProject', AuthMiddleware, async (req, res) => {
   const { name, description } = req.body;
   if (!name) return res.status(400).json({ message: "Name is required" });
@@ -26,7 +25,6 @@ router.post('/createProject', AuthMiddleware, async (req, res) => {
   }
 });
 
-// Get all projects
 router.get('/getProjects', AuthMiddleware, async (req, res) => {
   try {
     const projects = await Project.find({ ownerId: req.user.id });
@@ -37,7 +35,6 @@ router.get('/getProjects', AuthMiddleware, async (req, res) => {
   }
 });
 
-// Get a single project prompts
 router.get('/getProject/:projectId', AuthMiddleware, async (req, res) => {
   const { projectId } = req.params;
   try {
@@ -50,7 +47,7 @@ router.get('/getProject/:projectId', AuthMiddleware, async (req, res) => {
   }
 });
 
-// Chat with a project
+
 router.post('/:projectId/chat', AuthMiddleware, async (req, res) => {
   const { projectId } = req.params;
   const { prompt } = req.body;
@@ -61,11 +58,9 @@ router.post('/:projectId/chat', AuthMiddleware, async (req, res) => {
     const project = await Project.findOne({ _id: projectId, ownerId: req.user.id });
     if (!project) return res.status(404).json({ message: "Project not found" });
 
-    // Save user prompt
     project.prompts.push({ role: "user", content: prompt });
     await project.save();
 
-    // Prepare messages for Gemini model
     const messages = project.prompts.map(p => ({
       role: p.role === "assistant" ? "model" : "user",
       parts: [{ text: p.content }]
@@ -75,7 +70,6 @@ router.post('/:projectId/chat', AuthMiddleware, async (req, res) => {
     const result = await chat.sendMessage(prompt);
     const reply = result.response.text();
 
-    // Save assistant reply
     project.prompts.push({ role: "assistant", content: reply });
     await project.save();
 
@@ -87,7 +81,7 @@ router.post('/:projectId/chat', AuthMiddleware, async (req, res) => {
   }
 });
 
-// Delete a project
+
 router.delete('/deleteProject/:projectId', AuthMiddleware, async (req, res) => {
   const { projectId } = req.params;
   try {
