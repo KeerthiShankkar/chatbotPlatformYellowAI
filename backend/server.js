@@ -11,7 +11,7 @@ dotenv.config();
 const app = express()
 app.use(cookieParser());
 app.use(cors({
-  origin: "http://localhost:5173", // must match your frontend
+  origin: process.env.APPLICATION_URL, // must match your frontend
   credentials: true,               // allow cookies
 }));
 
