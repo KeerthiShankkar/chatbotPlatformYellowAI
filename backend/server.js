@@ -15,18 +15,13 @@ app.use(express.json());
 // ------------------- CORS Setup -------------------
 // Allowed frontend origin
 const allowedOrigin = process.env.APPLICATION_URL;
-console.log(allowedOrigin) // e.g., https://chat-platform-yellow-ai.vercel.app
+console.log('Allowed frontend origin:', allowedOrigin);
 
+// ✅ Use a single CORS middleware for all routes
 app.use(cors({
-  origin: allowedOrigin,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],   // exact match required
-  credentials: true        // allow cookies
-}));
-
-// Handle preflight requests for POST/PUT with credentials
-app.options('*', cors({
-  origin: allowedOrigin,
-  credentials: true
+  origin: allowedOrigin,           // allow your frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // include OPTIONS for preflight
+  credentials: true                // allow cookies
 }));
 
 // ------------------- MongoDB Connection -------------------
