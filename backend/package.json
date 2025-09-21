@@ -1,4 +1,12 @@
 {
+  "name": "chatbot-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Backend for chat platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
