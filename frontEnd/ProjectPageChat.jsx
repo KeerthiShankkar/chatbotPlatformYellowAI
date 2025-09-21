@@ -48,7 +48,7 @@ const ChangePageProject = () => {
 
     try {
       const res = await axios.post(
-        `${import.meta.env.VITE_BACKEND_ADDRESS}/${projectId}/chat`,
+        `${import.meta.env.VITE_BACKEND_ADDRESS}/home/${projectId}/chat`,
         { prompt: inputMessage },
         { withCredentials: true }
       );
