@@ -1,6 +1,6 @@
 import epxress from 'express';
 import jwt from 'jsonwebtoken';
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 import dotevn from 'dotenv';
 dotevn.config();
 import path from 'path'
