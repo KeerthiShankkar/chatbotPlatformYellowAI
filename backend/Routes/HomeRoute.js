@@ -55,7 +55,7 @@ router.get('/getProject/:projectId',AuthMiddleware,async(req,res)=>{
 })
 
 
-router.post("/:projectId/chat", AuthMiddleware, async (req, res) => {
+router.post("/home/:projectId/chat", AuthMiddleware, async (req, res) => {
   const { projectId } = req.params;
   const { prompt } = req.body;
 
