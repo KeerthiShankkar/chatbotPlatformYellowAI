@@ -14,10 +14,12 @@ app.use(express.json());
 
 // ------------------- CORS Setup -------------------
 // Allowed frontend origin
-const allowedOrigin = process.env.APPLICATION_URL; // e.g., https://chat-platform-yellow-ai.vercel.app
+const allowedOrigin = process.env.APPLICATION_URL;
+console.log(allowedOrigin) // e.g., https://chat-platform-yellow-ai.vercel.app
 
 app.use(cors({
-  origin: allowedOrigin,   // exact match required
+  origin: allowedOrigin,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],   // exact match required
   credentials: true        // allow cookies
 }));
 
