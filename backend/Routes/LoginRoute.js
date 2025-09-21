@@ -69,10 +69,11 @@ router.post('/login',async(req,res)=>{
     const token = jwt.sign({id:user._id,email:user.email},process.env.SECRET_KEY,{expiresIn:'1h'})
   res.cookie('token', token, {
   httpOnly: true,
-  secure: false, // false for localhost
-  sameSite: 'lax',
-  maxAge: 24 * 60 * 60 * 1000
-});
+  secure: true,        // must be true for HTTPS on Vercel
+  sameSite: 'none',    // allows cross-origin cookie
+  maxAge: 24 * 60 * 60 * 1000 // 1 day
+  });
+
 
   console.log("Token set in cookie:", token);
 
