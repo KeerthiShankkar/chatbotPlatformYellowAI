@@ -8,6 +8,7 @@ function LoginPage() {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
+  console.log(import.meta.env.VITE_BACKEND_ADDRESS);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
