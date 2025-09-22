@@ -57,6 +57,7 @@ project-root/
 
 ### 1. Clone the repository
 git clone https://github.com/KeerthiShankkar/chatbotPlatformYellowAI
+#
 cd chatbotPlatformYellowAI
 
 
