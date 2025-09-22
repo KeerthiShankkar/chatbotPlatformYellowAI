@@ -34,19 +34,18 @@ Backend is built with **Express.js**, frontend with **React**, and the app can b
 ## 📂 Project Structure
 project-root/
 ├── backend/
-│   ├── server.js        # Main Express server
-│   ├── Routes/          # Express routes
-│   ├── Models/          # Database models (User, Project, etc.)
-│   ├── Middlewares/     # Auth middleware
-│   └── .env             # Environment variables
-│
+│ ├── server.js # Main Express server
+│ ├── Routes/ # Express routes
+│ ├── Models/ # Database models (User, Project, etc.)
+│ ├── Middlewares/ # Auth middleware
+│ └── .env # Environment variables
 ├── frontend/
-│   ├── src/
-│   │   ├── pages/       
-│   │   └── main.jsx
-|   |   └── index.html
-│   └── package.json
-│
+│ ├── src/
+│ │ ├── pages/
+│ │ ├── components/
+│ │ └── main.jsx
+│ ├── index.html
+│ └── package.json
 └── README.md
 
 ---
