@@ -1,6 +1,6 @@
 # 🚀 AI Project & Chat Platform (MERN + Auth with Cookies)
 
-A **full-stack web application** that lets users **create projects** and **chat with AI models (like GPT)** in real-time.  
+A **full-stack web application** that lets users **create projects** and **chat with AI* in real-time.  
 User authentication is secured with **JWT tokens stored in HTTP-only cookies**.  
 
 Backend is built with **Express.js**, frontend with **React**, and the app can be deployed on **Vercel**.
