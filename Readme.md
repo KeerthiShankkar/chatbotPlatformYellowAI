@@ -31,7 +31,7 @@ Backend is built with **Express.js**, frontend with **React**, and the app can b
 
 ---
 
-## 📂 Project Structure
+## 📂 Project Structureproject-root/
 project-root/
 ├── backend/
 │ ├── server.js # Main Express server
@@ -41,8 +41,8 @@ project-root/
 │ └── .env # Environment variables
 ├── frontend/
 │ ├── src/
-│ │ ├── pages/
-│ │ ├── components/
+│ │ ├── pages/ # Register, Login, Projects, Chat UI
+│ │ ├── components/ # Reusable UI components
 │ │ └── main.jsx
 │ ├── index.html
 │ └── package.json
