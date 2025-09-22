@@ -72,7 +72,8 @@ router.post('/login',async(req,res)=>{
   httpOnly: true,
   secure: true,        // must be true for HTTPS on Vercel
   sameSite: 'none',    // allows cross-origin cookie
-  maxAge: 24 * 60 * 60 * 1000 // 1 day
+  maxAge: 24 * 60 * 60 * 1000, // 1 day
+  domain: ".vercel.app"
   });
 
 
