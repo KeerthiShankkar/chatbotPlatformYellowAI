@@ -95,32 +95,13 @@ npm start
 4. Users can **create projects**, **chat with AI** inside each project, and **delete projects**.
 5. Logout clears the cookie and revokes access.
 
----
-
-## 🚀 API Endpoints
-
-### Auth Routes
-- `POST /register` → Create new user  
-- `POST /login` → Login + set JWT cookie  
-- `POST /logout` → Clear JWT cookie  
-
-### Project Routes
-- `POST /projects` → Create new project  
-- `GET /projects` → Get all user projects  
-- `DELETE /projects/:id` → Delete a project  
-
-### Chat Routes
-- `POST /projects/:id/chat` → Send a message to AI model  
-- `GET /projects/:id/chat` → Fetch chat history  
 
 ---
 
 ## ✅ To-Do / Improvements
 - [ ] Add refresh tokens for long sessions  
 - [ ] Add rate limiting to prevent abuse  
-- [ ] Support multiple AI models  
 - [ ] Add offline access / caching  
 - [ ] Add JWT-in-header fallback for mobile Safari  
 
----
 
