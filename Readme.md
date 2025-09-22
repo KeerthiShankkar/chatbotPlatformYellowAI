@@ -32,9 +32,6 @@ Backend is built with **Express.js**, frontend with **React**, and the app can b
 ---
 
 ## 📂 Project Structure
-
-
-## 📂 Project Structure
 project-root/
 ├── backend/
 │   ├── server.js        # Main Express server
