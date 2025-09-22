@@ -56,8 +56,9 @@ project-root/
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the repository
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/KeerthiShankkar/chatbotPlatformYellowAI
+cd chatbotPlatformYellowAI
+
 
 ### 2. Backend Setup
 cd backend
